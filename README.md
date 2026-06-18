@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Create a fresh Next.js project
+(Next.js was needed as create-react-app would cause version issues with storybook and typescript)
+	npx create-next-app@latest component-library
+	cd component-library
+	npm install
 
-## Getting Started
+Install Storybook
+	npx storybook@latest init
 
-First, run the development server:
+ensure clean dependency alignment
+	npm install react@latest react-dom@latest
+	npm install -D typescript@latest @types/react @types/react-dom
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+run Storybook
+	npm run storybook
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Create your components
+	add components folder and make files of 
+		component.stories.tsx
+		component.tests.tsx
+		component.types.tsx
+		component.tsx
+		index.ts
+		
+Create Stories (stories are saved states used to save stylings for use in production)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create Tests
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+to run tests
+npx vitest
 
-## Learn More
+****DOCKER****
 
-To learn more about Next.js, take a look at the following resources:
+In package.json found in the component library main directory change the line storybook line under scripts to "storybook": "storybook dev -p 80  --ci", to allow the files to be listened to upon port 80
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+------DOCKERFILE--------
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+FROM node:20-alpine
 
-## Deploy on Vercel
+WORKDIR /peters_seth_ui_garden
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+COPY package.json ./
+COPY package-lock.json ./
+RUN npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+COPY . ./
+
+EXPOSE 80
+
+CMD ["npm", "run", "storybook"]
+
+------DOCKERIGNORE--------
+
+
+node_modules
+build
+.dockerignore
+Dockerfile
+Dockerfile.prod
+
+
+docker build -t peters_seth_coding_assignment12 .
+
+docker run -it --rm -p 8083:80 --name peters_seth_coding_assignment12 peters_seth_coding_assignment12
