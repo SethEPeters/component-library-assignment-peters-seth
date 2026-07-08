@@ -1,27 +1,27 @@
 Create a fresh Next.js project
 (Next.js was needed as create-react-app would cause version issues with storybook and typescript)
-	npx create-next-app@latest component-library
-	cd component-library
-	npm install
+npx create-next-app@latest component-library
+cd component-library
+npm install
 
 Install Storybook
-	npx storybook@latest init
+npx storybook@latest init
 
 ensure clean dependency alignment
-	npm install react@latest react-dom@latest
-	npm install -D typescript@latest @types/react @types/react-dom
+npm install react@latest react-dom@latest
+npm install -D typescript@latest @types/react @types/react-dom
 
 run Storybook
-	npm run storybook
+npm run storybook
 
 Create your components
-	add components folder and make files of 
-		component.stories.tsx
-		component.tests.tsx
-		component.types.tsx
-		component.tsx
-		index.ts
-		
+add components folder and make files of
+component.stories.tsx
+component.tests.tsx
+component.types.tsx
+component.tsx
+index.ts
+
 Create Stories (stories are saved states used to save stylings for use in production)
 
 Create Tests
@@ -29,15 +29,17 @@ Create Tests
 to run tests
 npx vitest
 
-****DOCKER****
+
+
+**DOCKER**
 
 In package.json found in the component library main directory change the line storybook line under scripts to "storybook": "storybook dev -p 80  --ci", to allow the files to be listened to upon port 80
 
-------DOCKERFILE--------
+\------DOCKERFILE--------
 
 FROM node:20-alpine
 
-WORKDIR /peters_seth_ui_garden
+WORKDIR /peters\_seth\_ui\_garden
 
 COPY package.json ./
 COPY package-lock.json ./
@@ -47,18 +49,21 @@ COPY . ./
 
 EXPOSE 80
 
-CMD ["npm", "run", "storybook"]
+CMD \["npm", "run", "storybook"]
 
-------DOCKERIGNORE--------
+\------DOCKERIGNORE--------
 
 
-node_modules
+
+node\_modules
 build
 .dockerignore
 Dockerfile
 Dockerfile.prod
 
 
-docker build -t peters_seth_coding_assignment12 .
 
-docker run -it --rm -p 8083:80 --name peters_seth_coding_assignment12 peters_seth_coding_assignment12
+docker build -t peters\_seth\_coding\_assignment13 .
+
+docker run -it --rm -p 8018:80 --name peters\_seth\_coding\_assignment13 peters\_seth\_coding\_assignment13
+
