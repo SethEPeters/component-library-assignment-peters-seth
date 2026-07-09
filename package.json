@@ -14,7 +14,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "npx vitest",
+      "npx vitest --run",
       "prettier --write --ignore-unknown",
       "eslint --fix"
     ],
