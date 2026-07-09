@@ -12,7 +12,7 @@ type Story = StoryObj<typeof Button>;
 export const ButtonDefault: Story = {
   args: {
     label: 'Default Theme',
-     state:  true,
+    state: true,
   },
   argTypes: {
     background_colour: { control: 'color' },
