@@ -11,7 +11,7 @@ type Story = StoryObj<typeof Button>;
 
 export const ButtonDefault: Story = {
   args: {
-      label:"Default Theme",
+    label: "Default Theme",
     state: true,
   },
   argTypes: {
