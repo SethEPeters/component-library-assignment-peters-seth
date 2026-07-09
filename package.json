@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "prepare": "husky",
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -44,6 +46,7 @@
     "jest-environment-jsdom": "^30.4.1",
     "jest-styled-components": "^7.4.0",
     "playwright": "^1.60.0",
+    "prettier": "^3.9.4",
     "storybook": "^10.4.4",
     "tailwindcss": "^4",
     "typescript": "^6.0.3",

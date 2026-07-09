@@ -7,8 +7,6 @@ export default {
   component: Card,
 } as Meta<typeof Card>;
 
-
-
 type Story = StoryObj<typeof Card>;
 
 export const CardDefault: Story = {
@@ -18,8 +16,8 @@ export const CardDefault: Story = {
     state: true,
   },
   argTypes: {
-    background_colour: { control: 'color' },
-  }
+    background_colour: { control: "color" },
+  },
 };
 
 export const CardDisabled: Story = {
@@ -29,6 +27,6 @@ export const CardDisabled: Story = {
     state: false,
   },
   argTypes: {
-    background_colour: { control: 'color' },
-  }
+    background_colour: { control: "color" },
+  },
 };

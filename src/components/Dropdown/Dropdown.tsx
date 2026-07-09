@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { DropdownProps } from "./Dropdown.types";
-import styled, { css } from 'styled-components';
-
-
+import styled, { css } from "styled-components";
 
 const StyledDropdown = styled.select<DropdownProps>`
   padding: 0.75rem 1.5rem;
@@ -14,16 +12,23 @@ const StyledDropdown = styled.select<DropdownProps>`
   background-color: ${({ background_colour }) =>
     background_colour ?? "#e6e3e3"};
 
-  ${props => !props.state && css`
-    color: white;
-    cursor: not-allowed;
-    background-color: #e4e4e4d3;
-    border-color: #e9e9e9;
-  `}
+  ${(props) =>
+    !props.state &&
+    css`
+      color: white;
+      cursor: not-allowed;
+      background-color: #e4e4e4d3;
+      border-color: #e9e9e9;
+    `}
+`;
 
-`
-
-export default function Dropdown({ label, option1, option2, background_colour, state }: DropdownProps) {
+export default function Dropdown({
+  label,
+  option1,
+  option2,
+  background_colour,
+  state,
+}: DropdownProps) {
   return (
     <StyledDropdown
       state={state}

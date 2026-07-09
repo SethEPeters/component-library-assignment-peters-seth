@@ -7,8 +7,6 @@ export default {
   component: TableFooter,
 } as Meta<typeof TableFooter>;
 
-
-
 type Story = StoryObj<typeof TableFooter>;
 
 export const TableFooterDefault: Story = {
@@ -17,8 +15,8 @@ export const TableFooterDefault: Story = {
     state: true,
   },
   argTypes: {
-    background_colour: { control: 'color' },
-  }
+    background_colour: { control: "color" },
+  },
 };
 
 export const TableFooterDisabled: Story = {
@@ -27,6 +25,6 @@ export const TableFooterDisabled: Story = {
     state: false,
   },
   argTypes: {
-    background_colour: { control: 'color' },
-  }
+    background_colour: { control: "color" },
+  },
 };

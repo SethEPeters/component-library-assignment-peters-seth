@@ -7,8 +7,6 @@ export default {
   component: Dropdown,
 } as Meta<typeof Dropdown>;
 
-
-
 type Story = StoryObj<typeof Dropdown>;
 
 export const DropdownDefault: Story = {
@@ -19,8 +17,8 @@ export const DropdownDefault: Story = {
     state: true,
   },
   argTypes: {
-    background_colour: { control: 'color' },
-  }
+    background_colour: { control: "color" },
+  },
 };
 
 export const DropdownDisabled: Story = {
@@ -31,6 +29,6 @@ export const DropdownDisabled: Story = {
     state: false,
   },
   argTypes: {
-    background_colour: { control: 'color' },
-  }
+    background_colour: { control: "color" },
+  },
 };

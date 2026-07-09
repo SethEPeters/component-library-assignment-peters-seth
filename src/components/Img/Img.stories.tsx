@@ -7,8 +7,6 @@ export default {
   component: Img,
 } as Meta<typeof Img>;
 
-
-
 type Story = StoryObj<typeof Img>;
 
 export const ImgDefault: Story = {
@@ -17,8 +15,8 @@ export const ImgDefault: Story = {
     state: true,
   },
   argTypes: {
-    border_colour: { control: 'color' },
-  }
+    border_colour: { control: "color" },
+  },
 };
 
 export const ImgDisabled: Story = {
@@ -27,6 +25,6 @@ export const ImgDisabled: Story = {
     state: false,
   },
   argTypes: {
-    border_colour: { control: 'color' },
-  }
+    border_colour: { control: "color" },
+  },
 };

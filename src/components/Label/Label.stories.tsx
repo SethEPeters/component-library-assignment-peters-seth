@@ -7,8 +7,6 @@ export default {
   component: Label,
 } as Meta<typeof Label>;
 
-
-
 type Story = StoryObj<typeof Label>;
 
 export const LabelDefault: Story = {
@@ -17,8 +15,8 @@ export const LabelDefault: Story = {
     state: true,
   },
   argTypes: {
-    background_colour: { control: 'color' },
-  }
+    background_colour: { control: "color" },
+  },
 };
 
 export const LabelDisabled: Story = {
@@ -27,6 +25,6 @@ export const LabelDisabled: Story = {
     state: false,
   },
   argTypes: {
-    background_colour: { control: 'color' },
-  }
+    background_colour: { control: "color" },
+  },
 };

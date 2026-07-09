@@ -7,8 +7,6 @@ export default {
   component: RadioButton,
 } as Meta<typeof RadioButton>;
 
-
-
 type Story = StoryObj<typeof RadioButton>;
 
 export const RadioButtonDefault: Story = {
@@ -17,8 +15,8 @@ export const RadioButtonDefault: Story = {
     state: true,
   },
   argTypes: {
-    background_colour: { control: 'color' },
-  }
+    background_colour: { control: "color" },
+  },
 };
 
 export const RadioButtonDisabled: Story = {
@@ -27,6 +25,6 @@ export const RadioButtonDisabled: Story = {
     state: false,
   },
   argTypes: {
-    background_colour: { control: 'color' },
-  }
+    background_colour: { control: "color" },
+  },
 };

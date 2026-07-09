@@ -7,8 +7,6 @@ export default {
   component: TableHeader,
 } as Meta<typeof TableHeader>;
 
-
-
 type Story = StoryObj<typeof TableHeader>;
 
 export const TableHeaderDefault: Story = {
@@ -17,8 +15,8 @@ export const TableHeaderDefault: Story = {
     state: true,
   },
   argTypes: {
-    background_colour: { control: 'color' },
-  }
+    background_colour: { control: "color" },
+  },
 };
 
 export const TableHeaderDisabled: Story = {
@@ -27,6 +25,6 @@ export const TableHeaderDisabled: Story = {
     state: false,
   },
   argTypes: {
-    background_colour: { control: 'color' },
-  }
+    background_colour: { control: "color" },
+  },
 };

@@ -7,8 +7,6 @@ export default {
   component: TableCell,
 } as Meta<typeof TableCell>;
 
-
-
 type Story = StoryObj<typeof TableCell>;
 
 export const TableCellDefault: Story = {
@@ -17,8 +15,8 @@ export const TableCellDefault: Story = {
     state: true,
   },
   argTypes: {
-    background_colour: { control: 'color' },
-  }
+    background_colour: { control: "color" },
+  },
 };
 
 export const TableCellDisabled: Story = {
@@ -27,6 +25,6 @@ export const TableCellDisabled: Story = {
     state: false,
   },
   argTypes: {
-    background_colour: { control: 'color' },
-  }
+    background_colour: { control: "color" },
+  },
 };

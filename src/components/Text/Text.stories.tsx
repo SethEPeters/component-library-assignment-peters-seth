@@ -7,8 +7,6 @@ export default {
   component: Text,
 } as Meta<typeof Text>;
 
-
-
 type Story = StoryObj<typeof Text>;
 
 export const TextDefault: Story = {
@@ -17,8 +15,8 @@ export const TextDefault: Story = {
     state: true,
   },
   argTypes: {
-    background_colour: { control: 'color' },
-  }
+    background_colour: { control: "color" },
+  },
 };
 
 export const TextDisabled: Story = {
@@ -27,6 +25,6 @@ export const TextDisabled: Story = {
     state: false,
   },
   argTypes: {
-    background_colour: { control: 'color' },
-  }
+    background_colour: { control: "color" },
+  },
 };

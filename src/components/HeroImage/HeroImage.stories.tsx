@@ -7,8 +7,6 @@ export default {
   component: HeroImage,
 } as Meta<typeof HeroImage>;
 
-
-
 type Story = StoryObj<typeof HeroImage>;
 
 export const HeroImageDefault: Story = {
@@ -17,8 +15,8 @@ export const HeroImageDefault: Story = {
     state: true,
   },
   argTypes: {
-    border_colour: { control: 'color' },
-  }
+    border_colour: { control: "color" },
+  },
 };
 
 export const HeroImageDisabled: Story = {
@@ -27,6 +25,6 @@ export const HeroImageDisabled: Story = {
     state: false,
   },
   argTypes: {
-    border_colour: { control: 'color' },
-  }
+    border_colour: { control: "color" },
+  },
 };

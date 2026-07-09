@@ -29,11 +29,9 @@ Create Tests
 to run tests
 npx vitest
 
-
-
 **DOCKER**
 
-In package.json found in the component library main directory change the line storybook line under scripts to "storybook": "storybook dev -p 80  --ci", to allow the files to be listened to upon port 80
+In package.json found in the component library main directory change the line storybook line under scripts to "storybook": "storybook dev -p 80 --ci", to allow the files to be listened to upon port 80
 
 \------DOCKERFILE--------
 
@@ -53,17 +51,12 @@ CMD \["npm", "run", "storybook"]
 
 \------DOCKERIGNORE--------
 
-
-
 node\_modules
 build
 .dockerignore
 Dockerfile
 Dockerfile.prod
 
-
-
 docker build -t peters\_seth\_coding\_assignment13 .
 
 docker run -it --rm -p 8018:80 --name peters\_seth\_coding\_assignment13 peters\_seth\_coding\_assignment13
-
