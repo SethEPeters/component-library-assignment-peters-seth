@@ -12,6 +12,9 @@
     "storybook": "storybook dev -p 80  --ci",
     "build-storybook": "storybook build"
   },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
   "dependencies": {
     "husky": "^9.1.7",
     "next": "16.2.9",
