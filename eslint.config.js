@@ -1,3 +1,4 @@
+const tseslint = require('typescript-eslint');
 const prettier = require('eslint-plugin-prettier');
 
 module.exports = [
