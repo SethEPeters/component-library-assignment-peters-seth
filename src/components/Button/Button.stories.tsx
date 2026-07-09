@@ -6,12 +6,12 @@ export default {
   theme: 'Components/Button',
   component: Button,
 } as Meta<typeof Button>;
-
+var useless;
 type Story = StoryObj<typeof Button>;
 
 export const ButtonDefault: Story = {
   args: {
-    lable: 'Default Theme',
+    label: 'Default Theme',
     state: true,
   },
   argTypes: {

@@ -13,7 +13,10 @@
     "build-storybook": "storybook build"
   },
   "lint-staged": {
-    "**/*": ["prettier --write --ignore-unknown", "eslint --fix"]
+    "**/*": [
+      "prettier --write --ignore-unknown",
+      "eslint --fix"
+    ]
   },
   "dependencies": {
     "husky": "^9.1.7",
