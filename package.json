@@ -4,8 +4,11 @@
   "private": true,
   "scripts": {
     "prepare": "husky",
-    "lint": "prettier --check .",
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "test": "vitest",
+    "test:ci": "vitest run",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
