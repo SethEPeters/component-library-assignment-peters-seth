@@ -7,7 +7,7 @@ describe('Visible Dropdown Test', () => {
   it('check if the dropdown element is visible', () => {
     render(<Dropdown label="default" option1="an option" option2="another option" state={true} />);
 
-    const dropdown = screen.getAllByRole('combobox', {});
+    const dropdown = screen.getByRole('combobox', {});
 
     expect(dropdown).toBeVisible();
   });
