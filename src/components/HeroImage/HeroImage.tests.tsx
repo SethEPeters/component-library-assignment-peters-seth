@@ -7,7 +7,7 @@ describe('Visible Hero Image Test', () => {
   it('check if the hero image element is visible', () => {
     render(<HeroImage alt="default" border_colour="#e4e4e4" state={true} />);
 
-    const heroimage = screen.getAllByRole('img', {});
+    const heroimage = screen.getByRole('img', {});
 
     expect(heroimage).toBeVisible();
   });

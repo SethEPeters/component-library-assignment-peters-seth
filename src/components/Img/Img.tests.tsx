@@ -7,7 +7,7 @@ describe('Visible Image Test', () => {
   it('check if the image element is visible', () => {
     render(<Img alt="default" border_colour="#e4e4e4" state={true} />);
 
-    const img = screen.getAllByRole('img', {});
+    const img = screen.getByRole('img', {});
 
     expect(img).toBeVisible();
   });
