@@ -1,17 +1,16 @@
-import React, { useState } from "react";
-import { RadioButtonProps } from "./RadioButton.types";
-import styled, { css } from "styled-components";
+import React, { useState } from 'react';
+import { RadioButtonProps } from './RadioButton.types';
+import styled, { css } from 'styled-components';
 
 const StyledRadioButton = styled.input.attrs({
-  type: "radio",
+  type: 'radio',
 })<RadioButtonProps>`
   accent-color: blue;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   color: black;
   cursor: pointer;
-  background-color: ${({ background_colour }) =>
-    background_colour ?? "#e6e3e3"};
+  background-color: ${({ background_colour }) => background_colour ?? '#e6e3e3'};
 
   ${(props) =>
     !props.state &&
@@ -31,8 +30,7 @@ const StyledRadioButtonLabel = styled.label<RadioButtonProps>`
   font-size: 1rem;
   color: black;
   cursor: pointer;
-  background-color: ${({ background_colour }) =>
-    background_colour ?? "#f4d3d3"};
+  background-color: ${({ background_colour }) => background_colour ?? '#f4d3d3'};
 
   ${(props) =>
     !props.state &&
@@ -47,12 +45,7 @@ const StyledRadioButtonLabel = styled.label<RadioButtonProps>`
   }
 `;
 
-export default function RadioButton({
-  label,
-  background_colour,
-  state,
-  onClick,
-}: RadioButtonProps) {
+export default function RadioButton({ label, background_colour, state }: RadioButtonProps) {
   const [isState, setState] = useState(false);
   return (
     <StyledRadioButtonLabel

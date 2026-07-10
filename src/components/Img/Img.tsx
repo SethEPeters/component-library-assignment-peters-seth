@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { ImgProps } from "./Img.types";
-import styled, { css } from "styled-components";
+import React from 'react';
+import { ImgProps } from './Img.types';
+import styled, { css } from 'styled-components';
 
 const StyledImg = styled.img<ImgProps>`
   padding: 0;
@@ -9,7 +9,7 @@ const StyledImg = styled.img<ImgProps>`
   border-radius: 4px;
   color: black;
   width: 200px;
-  border-color: ${({ border_colour }) => border_colour ?? "#e6e3e3"};
+  border-color: ${({ border_colour }) => border_colour ?? '#e6e3e3'};
 rgb(111, 111, 111)
   ${(props) =>
     !props.state &&
@@ -31,7 +31,7 @@ export default function Img({ alt, border_colour, state }: ImgProps) {
       state={state}
       border_colour={border_colour}
       alt={alt}
-      src={"src/images/PokemonSapphireGameplay.png"}
+      src={'src/images/PokemonSapphireGameplay.png'}
       data-testid="img"
     ></StyledImg>
   );

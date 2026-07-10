@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import { LabelProps } from "./Label.types";
-import styled, { css } from "styled-components";
+import React, { useState } from 'react';
+import { LabelProps } from './Label.types';
+import styled, { css } from 'styled-components';
 
 const StyledLabel = styled.label<LabelProps>`
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   color: black;
   cursor: pointer;
-  background-color: ${({ background_colour }) =>
-    background_colour ?? "#e6e3e3"};
+  background-color: ${({ background_colour }) => background_colour ?? '#e6e3e3'};
 
   ${(props) =>
     !props.state &&
@@ -23,12 +22,7 @@ const StyledLabel = styled.label<LabelProps>`
   }
 `;
 
-export default function Label({
-  label,
-  background_colour,
-  state,
-  onClick,
-}: LabelProps) {
+export default function Label({ label, background_colour, state }: LabelProps) {
   const [isState, setState] = useState(false);
   return (
     <StyledLabel

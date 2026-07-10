@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import { TableCellProps } from "./TableCell.types";
-import styled, { css } from "styled-components";
+import React, { useState } from 'react';
+import { TableCellProps } from './TableCell.types';
+import styled, { css } from 'styled-components';
 
 const StyledTableCell = styled.td<TableCellProps>`
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   color: black;
   cursor: pointer;
-  background-color: ${({ background_colour }) =>
-    background_colour ?? "#e6e3e3"};
+  background-color: ${({ background_colour }) => background_colour ?? '#e6e3e3'};
 
   ${(props) =>
     !props.state &&
@@ -23,12 +22,7 @@ const StyledTableCell = styled.td<TableCellProps>`
   }
 `;
 
-export default function TableCell({
-  label,
-  background_colour,
-  state,
-  onClick,
-}: TableCellProps) {
+export default function TableCell({ label, background_colour, state }: TableCellProps) {
   const [isState, setState] = useState(false);
   return (
     <StyledTableCell

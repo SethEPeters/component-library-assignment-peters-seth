@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import { TableHeaderProps } from "./TableHeader.types";
-import styled, { css } from "styled-components";
+import React, { useState } from 'react';
+import { TableHeaderProps } from './TableHeader.types';
+import styled, { css } from 'styled-components';
 
 const StyledTableHeader = styled.thead<TableHeaderProps>`
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   color: black;
   cursor: pointer;
-  background-color: ${({ background_colour }) =>
-    background_colour ?? "#e6e3e3"};
+  background-color: ${({ background_colour }) => background_colour ?? '#e6e3e3'};
 
   ${(props) =>
     !props.state &&
@@ -23,12 +22,7 @@ const StyledTableHeader = styled.thead<TableHeaderProps>`
   }
 `;
 
-export default function TableHeader({
-  label,
-  background_colour,
-  state,
-  onClick,
-}: TableHeaderProps) {
+export default function TableHeader({ label, background_colour, state }: TableHeaderProps) {
   const [isState, setState] = useState(false);
   return (
     <StyledTableHeader

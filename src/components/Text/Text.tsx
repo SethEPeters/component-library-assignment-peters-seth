@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import { TextProps } from "./Text.types";
-import styled, { css } from "styled-components";
+import React, { useState } from 'react';
+import { TextProps } from './Text.types';
+import styled, { css } from 'styled-components';
 
 const StyledText = styled.p<TextProps>`
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   color: black;
   cursor: pointer;
-  background-color: ${({ background_colour }) =>
-    background_colour ?? "#e6e3e3"};
+  background-color: ${({ background_colour }) => background_colour ?? '#e6e3e3'};
 
   ${(props) =>
     !props.state &&
@@ -23,12 +22,7 @@ const StyledText = styled.p<TextProps>`
   }
 `;
 
-export default function Text({
-  label,
-  background_colour,
-  state,
-  onClick,
-}: TextProps) {
+export default function Text({ label, background_colour, state }: TextProps) {
   const [isState, setState] = useState(false);
   return (
     <StyledText

@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import { TableFooterProps } from "./TableFooter.types";
-import styled, { css } from "styled-components";
+import React, { useState } from 'react';
+import { TableFooterProps } from './TableFooter.types';
+import styled, { css } from 'styled-components';
 
 const StyledTableFooter = styled.tfoot<TableFooterProps>`
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   color: black;
   cursor: pointer;
-  background-color: ${({ background_colour }) =>
-    background_colour ?? "#e6e3e3"};
+  background-color: ${({ background_colour }) => background_colour ?? '#e6e3e3'};
 
   ${(props) =>
     !props.state &&
@@ -23,12 +22,7 @@ const StyledTableFooter = styled.tfoot<TableFooterProps>`
   }
 `;
 
-export default function TableFooter({
-  label,
-  background_colour,
-  state,
-  onClick,
-}: TableFooterProps) {
+export default function TableFooter({ label, background_colour, state }: TableFooterProps) {
   const [isState, setState] = useState(false);
   return (
     <StyledTableFooter
