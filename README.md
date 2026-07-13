@@ -37,7 +37,7 @@ In package.json found in the component library main directory change the line st
 
 FROM node:20-alpine
 
-WORKDIR /peters\_seth\_ui\_garden
+WORKDIR /peters\_seth\_ui\_garden\_build\_checks
 
 COPY package.json ./
 COPY package-lock.json ./
